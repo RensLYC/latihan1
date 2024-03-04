@@ -20,3 +20,9 @@ def page_2():
 def page_3():
     st.title("halaman 3")
     st.write('halaman ini dipake untuk rumus')
+    
+PAGES = {
+    "page_1" : page_1,
+    "page_2" : page_2,
+    "page_3" : page_3
+}
