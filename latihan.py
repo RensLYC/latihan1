@@ -1,28 +1,28 @@
 import streamlit as st
-import pandas as pd
-#import matplotlib.pyplot as plt
+from page1 import page_1
+from page2 import page_2
+from page3 import page_3
+from kalkulatorsegitiga import kalkulatorsegitiga
+# import pandas as pd
+# st.write(" Infinity Coding Club 2024")
+# #import matplotlib.pyplot as plt
 
-st.write("coding 2024")
-df = pd.DataFrame({
-    'No' : [1,2,3,4],
-    'Nama' : ['abdil','kamar','power','alok'],
-    'Nilai' : [ 50,40,40,32]
-})
+# df = pd.DataFrame ({
+#     'No': [1, 2, 3, 4],
+#     'Nama' : ['Nurul','Nadia','Vino','Zahwa'],
+#     'Nilai' : [98, 90, 100, 92]
+# })
 
 # df
 
-# def page_1():
-#     st.title("halaman 1")
-#     st.write('halaman ini dipake untuk intro')
-# def page_2():
-#     st.title("halaman 2")
-#     st.write('halaman ini dipake untuk menampilkan youtube')
-# def page_3():
-#     st.title("halaman 3")
-#     st.write('halaman ini dipake untuk rumus')
-    
-# PAGES = {
-#     "page_1" : page_1,
-#     "page_2" : page_2,
-#     "page_3" : page_3
-# }
+
+        
+PAGES = {
+     "Page 1" : page_1,
+     "Page 2" : page_2,
+     "Page 3" : page_3,
+     "kalkulatorsegitiga" : kalkulatorsegitiga
+    }   
+st.sidebar.image("anos.jpg", width=100)
+page = st.sidebar.radio("Halaman", list(PAGES.keys()))
+PAGES[page]()
