@@ -41,6 +41,9 @@ st.markdown(
                  display: none;
              }
              
+             #mainmenu {visibility:hidden;}
+             footer {visibility:hidden;}
+             
              </style>
              """,
     unsafe_allow_html=True,
